@@ -1,8 +1,19 @@
+# macOS
 .DS_Store
-**/.idea/
-**/.gradle/
-**/.build/
-**/out/
-**/*.swp
-**/xcuserdata/
 
+.idea/
+.gradle/
+.build/
+out/
+
+# vim / emacs, etc.
+*.swp
+*~
+
+# Xcode
+xcuserdata/
+project.xcworkspace/
+build/
+
+# Cocoapods
+Pods/

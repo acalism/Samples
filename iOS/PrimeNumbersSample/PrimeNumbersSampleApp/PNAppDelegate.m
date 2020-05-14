@@ -20,17 +20,30 @@
 #import "PNDefinitionViewController.h"
 
 #import <Bolts/Bolts.h>
-#import <Bolts/BFAppLinkReturnToRefererController.h>
-#import <FacebookSDK/FacebookSDK.h>
+//#import <Bolts/BFAppLinkReturnToRefererController.h>
+//#import <FacebookSDK/FacebookSDK.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @implementation PNAppDelegate
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+  // probably nil
+  NSString * __unused sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
+  id __unused annotation = options[UIApplicationOpenURLOptionsAnnotationKey];
+
   // Take resolved app link and open the exact resourse view.
   // for more examples of Bolts support for App links, see:
   // https://github.com/BoltsFramework/Bolts-iOS#app-links
+#if 1
+  [FBSDKSettings setClientToken:@"43d3fa7a6bb7e86cdec7cd4258b633ad"];
+  [FBSDKSettings setAppID:@"321332404687158"];
+#else
   [FBSettings setClientToken:@"43d3fa7a6bb7e86cdec7cd4258b633ad"];
   [FBSettings setDefaultAppID:@"321332404687158"];
+#endif
   BFURL *parsedUrl = [BFURL URLWithInboundURL:url sourceApplication:sourceApplication];
   
   // Use the target URL from the App Link to locate content.

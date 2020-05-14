@@ -19,11 +19,16 @@
 #import "ALPDetailViewController.h"
 #import "ALPNewLinkViewController.h"
 #import "ALPDetailViewController.h"
-#import <FacebookSDK/FacebookSDK.h>
-#import "FacebookSDK/FBAppLinkResolver.h"
-#import "Bolts/BFAppLinkNavigation.h"
+
+//#import <FacebookSDK/FacebookSDK.h>
+//#import "FacebookSDK/FBAppLinkResolver.h"
+@import FBSDKCoreKit;
+
+//#import "Bolts/BFAppLinkNavigation.h"
 #import <Bolts/Bolts.h>
 
+
+NS_ASSUME_NONNULL_BEGIN
 
 
 @interface ALPLinkListViewController () {
@@ -83,9 +88,11 @@
   // For better performance,  instead of using the default hidden webview to resolve app links
   // we set the resolver to use Facebook indexing which scrapes the page and cache the meta data on Facebook servers.
   // see https://developers.facebook.com/docs/reference/ios/current/class/FBAppLinkResolver/ for details.
-  
+#if 1
+  [BFAppLinkNavigation setDefaultResolver:ALPLinkResolver.new];
+#else
   [BFAppLinkNavigation setDefaultResolver:[[FBAppLinkResolver alloc] init]];
-  
+#endif
   // If you just want to navigate to the target app,  you can just use the single commented line.
   // [BFAppLinkNavigation navigateToURLInBackground:[NSURL URLWithString:url]];
   
@@ -106,7 +113,7 @@
   
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender
 {
   if ([[segue identifier] isEqualToString:@"showDetail"]) {
     NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
@@ -115,3 +122,20 @@
 }
 
 @end
+
+
+
+
+
+@implementation ALPLinkResolver
+
+- (BFTask *)appLinkFromURLInBackground:(NSURL *)url
+{
+  BFTask *t = BFTask.new;
+  return t;
+}
+
+@end
+
+
+NS_ASSUME_NONNULL_END

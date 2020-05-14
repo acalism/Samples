@@ -1,0 +1,41 @@
+
+workspace 'AppLinkSample.xcworkspace'
+
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+def shared_pods
+  pod 'Bolts'
+  #pod 'FacebookSDK'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+end
+
+
+target 'AppLinkPasteboardSample' do
+
+  project 'AppLinkPasteboardSample/AppLinkPasteboardSample.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for AppLinkPasteboardSample
+  shared_pods
+
+end
+
+
+
+
+target 'PrimeNumbersSampleApp' do
+
+  project 'PrimeNumbersSample/PrimeNumbersSampleApp.xcodeproj'
+
+  use_frameworks!
+
+  # Pods for PrimeNumbersSampleApp
+  shared_pods
+
+end

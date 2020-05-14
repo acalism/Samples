@@ -14,12 +14,17 @@
  * limitations under the License.
  */
 #import "ALPDetailViewController.h"
-#import "FacebookSDK/FacebookSDK.h"
+
 #import "ALPAppDelegate.h"
-#import "Bolts/BFAppLinkNavigation.h"
-#import "Bolts/BFAppLinkTarget.h"
-#import "Bolts/BFAppLink.h"
-#import "Bolts/BFTask.h"
+
+@import Bolts;
+@import FBSDKCoreKit;
+
+//#import "FacebookSDK/FacebookSDK.h"
+//#import "Bolts/BFAppLinkNavigation.h"
+//#import "Bolts/BFAppLinkTarget.h"
+//#import "Bolts/BFAppLink.h"
+//#import "Bolts/BFTask.h"
 
 @interface ALPDetailViewController ()
 
@@ -78,6 +83,33 @@
   // Facebook provide indexing service for app links for better performance.
   // If you want to see the content of the indexing, following Graph API fetch it.
   // For more information see doc: https://developers.facebook.com/docs/graph-api/using-graph-api/v2.0#allookup
+#if 1
+  NSString *path = @"";
+  NSMutableDictionary<NSString *, id> *params = @{}.mutableCopy;
+  params[@"ids"] = self.detailUrlStringItem;
+  params[@"type"] = @"al";
+
+//  FBSDKGraphRequestFlags flags = FBSDKGraphRequestFlagDoNotInvalidateTokenOnError;
+//  flags |= FBSDKGraphRequestFlagDisableErrorRecovery;
+
+  FBSDKGraphRequest *request =
+  [[FBSDKGraphRequest alloc] initWithGraphPath:path
+                                    parameters:params
+                                   tokenString:nil
+                                       version:nil
+                                    HTTPMethod:FBSDKHTTPMethodGET];
+
+  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+    NSLog(@"%s, error is %@, result is %@", __PRETTY_FUNCTION__, error, result);
+    if (nil != error) {
+      self.openGraphAppLinkTextView.text = [NSString stringWithFormat:@"%@:%@:%@", error.localizedDescription, error.localizedFailureReason, error.localizedRecoverySuggestion];
+      return;
+    }
+    self.openGraphAppLinkTextView.text = [NSString stringWithFormat:@"%@", result];
+  }];
+
+#else
+
   [FBRequestConnection startWithGraphPath:[NSString stringWithFormat:@"?ids=%@&type=al", self.detailUrlStringItem]
                         completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                           if (error) {
@@ -87,6 +119,7 @@
                           self.openGraphAppLinkTextView.text = [NSString stringWithFormat:@"%@", result];
                         }
    ];
+#endif
 }
 
 - (IBAction)onDeleteButtonTap:(id)sender

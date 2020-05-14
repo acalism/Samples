@@ -15,7 +15,10 @@
  */
 
 #import "ALPAppDelegate.h"
-#import <FacebookSDK/FacebookSDK.h>
+//#import <FacebookSDK/FacebookSDK.h>
+
+@import FBSDKCoreKit;
+
 #import "ALPLinkListViewController.h"
 
 @implementation ALPAppDelegate
@@ -26,7 +29,7 @@
   // if you use facebook indexing, you will need to add client token for facebook sdk to make graph api call.
   // you can find your client token on developers.facebook.com/apps/[your-app-id]/settings/advanced/
   // Notice that Application ID is set in plist file.
-  [FBSettings setClientToken:@"43d3fa7a6bb7e86cdec7cd4258b633ad"];
+  [FBSDKSettings setClientToken:@"43d3fa7a6bb7e86cdec7cd4258b633ad"];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

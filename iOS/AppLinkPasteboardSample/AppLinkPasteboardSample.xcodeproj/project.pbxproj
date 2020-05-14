@@ -3,20 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43242ACF246A9D5B005CB169 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43242ACE246A9D5B005CB169 /* CoreServices.framework */; };
 		B261DBD6192405A10050B5B1 /* ALPNewLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B261DBD5192405A10050B5B1 /* ALPNewLinkViewController.m */; };
 		B261DBDA19240FC40050B5B1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBD919240FC40050B5B1 /* CFNetwork.framework */; };
 		B261DBDC19240FD90050B5B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBDB19240FD90050B5B1 /* CoreLocation.framework */; };
 		B261DBDE19240FE50050B5B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBDD19240FE50050B5B1 /* libz.dylib */; };
-		B261DBE019240FF10050B5B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBDF19240FF10050B5B1 /* MobileCoreServices.framework */; };
 		B261DBE2192410010050B5B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBE1192410010050B5B1 /* QuartzCore.framework */; };
 		B261DBE4192410100050B5B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBE3192410100050B5B1 /* Security.framework */; };
 		B261DBE61924102B0050B5B1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBE51924102B0050B5B1 /* StoreKit.framework */; };
 		B274E5D6194A86540049975C /* README in Resources */ = {isa = PBXBuildFile; fileRef = B274E5D5194A86540049975C /* README */; };
-		B274E5D8194A8A8A0049975C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B274E5D7194A8A8A0049975C /* FacebookSDK.framework */; };
 		B27B693B1923EDDD007D76CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27B693A1923EDDD007D76CE /* Foundation.framework */; };
 		B27B693D1923EDDD007D76CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27B693C1923EDDD007D76CE /* CoreGraphics.framework */; };
 		B27B693F1923EDDD007D76CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27B693E1923EDDD007D76CE /* UIKit.framework */; };
@@ -30,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43242ACE246A9D5B005CB169 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		43242AD2246AA8E3005CB169 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; indentWidth = 2; lineEnding = 0; name = Podfile; path = ../Podfile; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		43242AD3246AA8E3005CB169 /* Podfile.lock */ = {isa = PBXFileReference; explicitFileType = text.yaml; fileEncoding = 4; indentWidth = 2; lineEnding = 0; name = Podfile.lock; path = ../Podfile.lock; sourceTree = "<group>"; tabWidth = 2; };
 		B261DBD4192405A10050B5B1 /* ALPNewLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ALPNewLinkViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B261DBD5192405A10050B5B1 /* ALPNewLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ALPNewLinkViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B261DBD919240FC40050B5B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -45,10 +47,9 @@
 		B27B693A1923EDDD007D76CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B27B693C1923EDDD007D76CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B27B693E1923EDDD007D76CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B27B69421923EDDD007D76CE /* AppLinkPasteboardSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppLinkPasteboardSample-Info.plist"; sourceTree = "<group>"; };
+		B27B69421923EDDD007D76CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27B69441923EDDD007D76CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B27B69461923EDDD007D76CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		B27B69481923EDDD007D76CE /* AppLinkPasteboardSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppLinkPasteboardSample-Prefix.pch"; sourceTree = "<group>"; };
 		B27B69491923EDDD007D76CE /* ALPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ALPAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B27B694A1923EDDD007D76CE /* ALPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ALPAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B27B694D1923EDDD007D76CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,9 +69,8 @@
 				B261DBE61924102B0050B5B1 /* StoreKit.framework in Frameworks */,
 				B261DBE4192410100050B5B1 /* Security.framework in Frameworks */,
 				B261DBE2192410010050B5B1 /* QuartzCore.framework in Frameworks */,
-				B261DBE019240FF10050B5B1 /* MobileCoreServices.framework in Frameworks */,
 				B261DBDE19240FE50050B5B1 /* libz.dylib in Frameworks */,
-				B274E5D8194A8A8A0049975C /* FacebookSDK.framework in Frameworks */,
+				43242ACF246A9D5B005CB169 /* CoreServices.framework in Frameworks */,
 				B261DBDC19240FD90050B5B1 /* CoreLocation.framework in Frameworks */,
 				B27B693D1923EDDD007D76CE /* CoreGraphics.framework in Frameworks */,
 				B261DBDA19240FC40050B5B1 /* CFNetwork.framework in Frameworks */,
@@ -82,15 +82,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43242AD1246AA8C1005CB169 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43242AD2246AA8E3005CB169 /* Podfile */,
+				43242AD3246AA8E3005CB169 /* Podfile.lock */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B27B692E1923EDDD007D76CE = {
 			isa = PBXGroup;
 			children = (
 				B274E5D5194A86540049975C /* README */,
+				43242AD1246AA8C1005CB169 /* Supporting Files */,
 				B27B69401923EDDD007D76CE /* AppLinksPasteboardSample */,
 				B27B69391923EDDD007D76CE /* Frameworks */,
 				B27B69381923EDDD007D76CE /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		B27B69381923EDDD007D76CE /* Products */ = {
 			isa = PBXGroup;
@@ -103,6 +115,7 @@
 		B27B69391923EDDD007D76CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43242ACE246A9D5B005CB169 /* CoreServices.framework */,
 				B274E5D7194A8A8A0049975C /* FacebookSDK.framework */,
 				B261DBE51924102B0050B5B1 /* StoreKit.framework */,
 				B261DBE3192410100050B5B1 /* Security.framework */,
@@ -141,10 +154,9 @@
 		B27B69411923EDDD007D76CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B27B69421923EDDD007D76CE /* AppLinkPasteboardSample-Info.plist */,
+				B27B69421923EDDD007D76CE /* Info.plist */,
 				B27B69431923EDDD007D76CE /* InfoPlist.strings */,
 				B27B69461923EDDD007D76CE /* main.m */,
-				B27B69481923EDDD007D76CE /* AppLinkPasteboardSample-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,12 +188,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ALP;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = applinks.org;
 			};
 			buildConfigurationList = B27B69321923EDDD007D76CE /* Build configuration list for PBXProject "AppLinkPasteboardSample" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -249,6 +261,38 @@
 		B27B696D1923EDDD007D76CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = AppLinkPasteboardSample;
 				SDKROOT = iphoneos;
 			};
@@ -257,6 +301,36 @@
 		B27B696E1923EDDD007D76CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = AppLinkPasteboardSample;
 				SDKROOT = iphoneos;
 			};
@@ -265,32 +339,26 @@
 		B27B69701923EDDD007D76CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/gen/Bolts-iOS/build/ios",
-					"/Users/gen/ios-sdk/build",
-					/Users/gen/Documents/FacebookSDK,
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/AppLinkPasteboardSample/AppLinkPasteboardSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/AppLinkPasteboardSample/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.applinks.AppLinkPasteboardSampleApp;
 			};
 			name = Debug;
 		};
 		B27B69711923EDDD007D76CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/gen/Bolts-iOS/build/ios",
-					"/Users/gen/ios-sdk/build",
-					/Users/gen/Documents/FacebookSDK,
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/AppLinkPasteboardSample/AppLinkPasteboardSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/AppLinkPasteboardSample/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.applinks.AppLinkPasteboardSampleApp;
 			};
 			name = Release;
 		};

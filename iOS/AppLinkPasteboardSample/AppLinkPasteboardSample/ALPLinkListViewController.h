@@ -15,11 +15,22 @@
  */
 
 #import <UIKit/UIKit.h>
+@import Bolts;
+
 
 @class ALPDetailViewController;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ALPLinkListViewController : UITableViewController
 
 @property (strong, nonatomic) ALPDetailViewController *detailViewController;
 
 @end
+
+
+@interface ALPLinkResolver : NSObject<BFAppLinkResolving>
+
+@end
+
+NS_ASSUME_NONNULL_END

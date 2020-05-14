@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		B21FBFB1192183FC00C4F8A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21FBFB0192183FC00C4F8A7 /* Images.xcassets */; };
 		B21FBFD519218E4D00C4F8A7 /* PNExamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21FBFD419218E4D00C4F8A7 /* PNExamplesViewController.m */; };
 		B21FBFDB1921A9D300C4F8A7 /* PNDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21FBFDA1921A9D300C4F8A7 /* PNDefinitionViewController.m */; };
-		B24A9E28194FBC8000603EBB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24A9E27194FBC8000603EBB /* FacebookSDK.framework */; };
 		B25A76F61921CCCD00CBB4F0 /* PNPrimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A76F51921CCCD00CBB4F0 /* PNPrimeHelper.m */; };
 		B2C422EE193815AD00013D4E /* README in Resources */ = {isa = PBXBuildFile; fileRef = B2C422ED193815AD00013D4E /* README */; };
 		B2E0D9491921DB130024A6FF /* PNShareActionSheetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0D9481921DB130024A6FF /* PNShareActionSheetHelper.m */; };
@@ -29,12 +28,11 @@
 		B21FBF98192183FC00C4F8A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B21FBF9A192183FC00C4F8A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B21FBF9C192183FC00C4F8A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B21FBFA0192183FC00C4F8A7 /* PrimeNumbersSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrimeNumbersSampleApp-Info.plist"; sourceTree = "<group>"; };
+		B21FBFA0192183FC00C4F8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B21FBFA2192183FC00C4F8A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B21FBFA4192183FC00C4F8A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B21FBFA6192183FC00C4F8A7 /* PrimeNumbersSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrimeNumbersSampleApp-Prefix.pch"; sourceTree = "<group>"; };
 		B21FBFA7192183FC00C4F8A7 /* PNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNAppDelegate.h; sourceTree = "<group>"; };
-		B21FBFA8192183FC00C4F8A7 /* PNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNAppDelegate.m; sourceTree = "<group>"; };
+		B21FBFA8192183FC00C4F8A7 /* PNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PNAppDelegate.m; sourceTree = "<group>"; };
 		B21FBFAB192183FC00C4F8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B21FBFAD192183FC00C4F8A7 /* PNNumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNNumberViewController.h; sourceTree = "<group>"; };
 		B21FBFAE192183FC00C4F8A7 /* PNNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNNumberViewController.m; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21FBF9B192183FC00C4F8A7 /* CoreGraphics.framework in Frameworks */,
-				B24A9E28194FBC8000603EBB /* FacebookSDK.framework in Frameworks */,
 				B21FBF9D192183FC00C4F8A7 /* UIKit.framework in Frameworks */,
 				B21FBF99192183FC00C4F8A7 /* Foundation.framework in Frameworks */,
 			);
@@ -75,7 +72,9 @@
 				B21FBF97192183FC00C4F8A7 /* Frameworks */,
 				B21FBF96192183FC00C4F8A7 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		B21FBF96192183FC00C4F8A7 /* Products */ = {
 			isa = PBXGroup;
@@ -122,10 +121,9 @@
 		B21FBF9F192183FC00C4F8A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B21FBFA0192183FC00C4F8A7 /* PrimeNumbersSampleApp-Info.plist */,
+				B21FBFA0192183FC00C4F8A7 /* Info.plist */,
 				B21FBFA1192183FC00C4F8A7 /* InfoPlist.strings */,
 				B21FBFA4192183FC00C4F8A7 /* main.m */,
-				B21FBFA6192183FC00C4F8A7 /* PrimeNumbersSampleApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,12 +155,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PN;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = applinks.org;
 			};
 			buildConfigurationList = B21FBF90192183FC00C4F8A7 /* Build configuration list for PBXProject "PrimeNumbersSampleApp" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -232,7 +230,36 @@
 		B21FBFC5192183FC00C4F8A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = PrimeNumbersSampleApp;
 				SDKROOT = iphoneos;
 			};
@@ -241,7 +268,34 @@
 		B21FBFC6192183FC00C4F8A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = PrimeNumbersSampleApp;
 				SDKROOT = iphoneos;
 			};
@@ -252,12 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/gen/Bolts-iOS/build/ios",
-					"/Users/gen/ios-sdk/build",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/PrimeNumbersSampleApp/PrimeNumbersSampleApp-Info.plist";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/PrimeNumbersSampleApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.applinks.${PRODUCT_NAME:rfc1034identifier}";
 			};
 			name = Debug;
 		};
@@ -266,12 +318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/gen/Bolts-iOS/build/ios",
-					"/Users/gen/ios-sdk/build",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/PrimeNumbersSampleApp/PrimeNumbersSampleApp-Info.plist";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/PrimeNumbersSampleApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.applinks.${PRODUCT_NAME:rfc1034identifier}";
 			};
 			name = Release;
 		};
