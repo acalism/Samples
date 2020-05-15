@@ -17,49 +17,104 @@
 
 #import "PNShareActionSheetHelper.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+@interface PNShareActionSheetHelper ()
+@property (nonatomic, strong, readonly) UIViewController *topViewController;
+@end
+
+
+
 @implementation PNShareActionSheetHelper
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+
+- (UIViewController *)topViewController
 {
-  switch (buttonIndex) {
-    case 0:
-      [self copyLinkToClipboard];
-      break;
-    case 1:
-      [self emailLink];
-      break;
-    default:
-      break;
-  }
+  UIViewController *vc = UIApplication.sharedApplication.delegate.window.rootViewController;
+  return vc;
 }
+
+
 
 - (void)copyLinkToClipboard
 {
-  UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+  UIPasteboard *pasteboard = UIPasteboard.generalPasteboard;
   pasteboard.persistent = YES;
-  [pasteboard setString:[self linkOfCurrentView]];
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Link Copied to Clipboard"
-                                                  message:@"You can paste the link to other app to share this page now."
-                                                 delegate:nil
-                                        cancelButtonTitle:@"OK"
-                                        otherButtonTitles:nil];
-  [alert show];
+  pasteboard.string = self.linkOfCurrentView;
+
+  NSString *title = @"Link Copied to Clipboard";
+  NSString *message = @"You can paste the link to other app to share this page now.";
+  NSString *okButtonTitle = @"OK";
+
+  UIAlertAction *action =
+  [UIAlertAction actionWithTitle:okButtonTitle
+                           style:(UIAlertActionStyleDefault)
+                         handler:^(UIAlertAction * _Nonnull action)
+  {
+    //
+  }];
+
+  UIAlertController *ac =
+  [UIAlertController alertControllerWithTitle:title
+                                      message:message
+                               preferredStyle:(UIAlertControllerStyleAlert)];
+
+  [ac addAction:action];
+
+  [self.topViewController presentViewController:ac animated:true completion:nil];
 }
+
 
 - (void)emailLink
 {
-  NSString *emailtoURL = [NSString stringWithFormat:@"mailto:yourfriend@example.com?subject=%@&body=%@", [self title], [self linkOfCurrentView]];
-  emailtoURL = [emailtoURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  [[UIApplication sharedApplication] openURL:[NSURL URLWithString: emailtoURL]];
+  NSURLComponents *uc = [NSURLComponents componentsWithString:@"mailto:yourfriend@example.com"];
+  uc.queryItems = @[
+    [NSURLQueryItem queryItemWithName:@"subject" value:self.title],
+    [NSURLQueryItem queryItemWithName:@"body" value:self.linkOfCurrentView],
+  ];
+  NSURL *emailtoURL = uc.URL;
+  [UIApplication.sharedApplication openURL:emailtoURL];
 }
 
-- (void) launchActionList:(NSString *)title
+
+
+- (void)launchActionList:(NSString *)title
 {
-  [self setTitle:title];
-  UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:[self title]
-                                                      delegate:self
-                                             cancelButtonTitle:@"Cancel"
-                                        destructiveButtonTitle:nil
-                                             otherButtonTitles:@"Copy Link to Clipboard", @"Share Link via E-mail", nil];
-  [popup showInView:[UIApplication sharedApplication].keyWindow];
+  self.title = title;
+
+  UIAlertAction *cancelAction =
+  [UIAlertAction actionWithTitle:@"Cancel"
+                           style:(UIAlertActionStyleCancel)
+                         handler:^(UIAlertAction * _Nonnull action)
+  {
+    //
+  }];
+
+  UIAlertAction *copyAction =
+  [UIAlertAction actionWithTitle:@"Copy Link to Clipboard"
+                           style:(UIAlertActionStyleDefault)
+                         handler:^(UIAlertAction * _Nonnull action)
+  {
+    [self copyLinkToClipboard];
+  }];
+
+  UIAlertAction *shareAction =
+  [UIAlertAction actionWithTitle:@"Share Link via E-mail"
+                           style:(UIAlertActionStyleDefault)
+                         handler:^(UIAlertAction * _Nonnull action)
+  {
+    [self emailLink];
+  }];
+
+  UIAlertController *controller =
+  [UIAlertController alertControllerWithTitle:title
+                                      message:nil
+                               preferredStyle:(UIAlertControllerStyleActionSheet)];
+  [controller addAction:cancelAction];
+  [controller addAction:copyAction];
+  [controller addAction:shareAction];
+  [self.topViewController presentViewController:controller animated:true completion:nil];
 }
+
 @end
+
+NS_ASSUME_NONNULL_END

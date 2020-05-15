@@ -17,10 +17,17 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface PNShareActionSheetHelper : NSObject <UIActionSheetDelegate>
-@property (strong, nonatomic) NSString *linkOfCurrentView;
-@property (strong, nonatomic) NSString *title;
+
+@property (copy, nonatomic) NSString *linkOfCurrentView;
+@property (copy, nonatomic) NSString *title;
+
 - (void)copyLinkToClipboard;
 - (void)emailLink;
 - (void)launchActionList:(NSString *)title;
+
 @end
+
+NS_ASSUME_NONNULL_END

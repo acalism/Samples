@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43242ACF246A9D5B005CB169 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43242ACE246A9D5B005CB169 /* CoreServices.framework */; };
+		43AAEEC2246E4654001FC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AAEEC1246E4654001FC5CE /* LaunchScreen.storyboard */; };
 		B261DBD6192405A10050B5B1 /* ALPNewLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B261DBD5192405A10050B5B1 /* ALPNewLinkViewController.m */; };
 		B261DBDA19240FC40050B5B1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBD919240FC40050B5B1 /* CFNetwork.framework */; };
 		B261DBDC19240FD90050B5B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261DBDB19240FD90050B5B1 /* CoreLocation.framework */; };
@@ -32,6 +33,7 @@
 		43242ACE246A9D5B005CB169 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		43242AD2246AA8E3005CB169 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; indentWidth = 2; lineEnding = 0; name = Podfile; path = ../Podfile; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43242AD3246AA8E3005CB169 /* Podfile.lock */ = {isa = PBXFileReference; explicitFileType = text.yaml; fileEncoding = 4; indentWidth = 2; lineEnding = 0; name = Podfile.lock; path = ../Podfile.lock; sourceTree = "<group>"; tabWidth = 2; };
+		43AAEEC1246E4654001FC5CE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B261DBD4192405A10050B5B1 /* ALPNewLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ALPNewLinkViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B261DBD5192405A10050B5B1 /* ALPNewLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ALPNewLinkViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B261DBD919240FC40050B5B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B27B694C1923EDDD007D76CE /* Main.storyboard */,
+				43AAEEC1246E4654001FC5CE /* LaunchScreen.storyboard */,
 				B27B69491923EDDD007D76CE /* ALPAppDelegate.h */,
 				B27B694A1923EDDD007D76CE /* ALPAppDelegate.m */,
 				B27B69521923EDDD007D76CE /* ALPLinkListViewController.h */,
@@ -217,6 +220,7 @@
 				B274E5D6194A86540049975C /* README in Resources */,
 				B27B69591923EDDD007D76CE /* Images.xcassets in Resources */,
 				B27B694E1923EDDD007D76CE /* Main.storyboard in Resources */,
+				43AAEEC2246E4654001FC5CE /* LaunchScreen.storyboard in Resources */,
 				B27B69451923EDDD007D76CE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +345,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/AppLinkPasteboardSample/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = org.applinks.AppLinkPasteboardSampleApp;
@@ -354,8 +358,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/AppLinkPasteboardSample/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = org.applinks.AppLinkPasteboardSampleApp;
